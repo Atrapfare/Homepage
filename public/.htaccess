@@ -1,0 +1,28 @@
+# Canonical HTTPS/non-WWW
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTPS} off [OR]
+	RewriteCond %{HTTP_HOST} ^www\.example\.com [NC]
+	RewriteRule (.*) https://example.com/$1 [L,R=301]
+</IfModule>
+
+<Files ".user.ini"> 
+    Require all denied
+</Files>
+
+ErrorDocument 400 https://atrapfare.com/error/?error=400
+ErrorDocument 401 https://atrapfare.com/error/?error=401
+ErrorDocument 403 https://atrapfare.com/error/?error=403
+ErrorDocument 404 https://atrapfare.com/error/?error=404
+ErrorDocument 429 https://atrapfare.com/error/?error=429
+ErrorDocument 500 https://atrapfare.com/error/?error=500
+ErrorDocument 503 https://atrapfare.com/error/?error=503
+
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "default-src 'self'; font-src 'self'; img-src 'self' data:; object-src 'self'; script-src 'self'; style-src 'self' 'unsafe-hashes' 'sha256-a1DjqturKbnV+wamVFSb/rszXk0Cr0H5G1f1IQsXBf4='; frame-src www.google.com;"
+    Header set X-XSS-Protection "1; mode=block"
+    Header always append X-Frame-Options SAMEORIGIN
+    Header set X-Content-Type-Options "nosniff"
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+    Header set Referrer-Policy "same-origin"
+    Header set Permissions-Policy "accelerometer=(self), autoplay=(self), camera=(self), cross-origin-isolated=(self), display-capture=(self), document-domain=(self), encrypted-media=(self), fullscreen=(self), geolocation=(self), gyroscope=(self), keyboard-map=(self), magnetometer=(self), microphone=(self), midi=(self), payment=(self), picture-in-picture=(self), publickey-credentials-get=(self), screen-wake-lock=(self), sync-xhr=(self), usb=(self), web-share=(self), xr-spatial-tracking=(self), clipboard-read=(self), clipboard-write=(self), hid=(self), idle-detection=(self), serial=(self), window-placement=(self)"
+</IfModule>

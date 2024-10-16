@@ -1,0 +1,9 @@
+.error .wrapper lottie-player {
+    width: 99%;
+    height: 99%;
+}
+
+.error .wrapper .solutions p {
+    margin: 10px 0 0 0;
+    line-height: 15px;
+}

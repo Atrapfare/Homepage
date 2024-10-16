@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://atrapfare.com/sitemap.xml

@@ -1,0 +1,139 @@
+.skills {
+    color: #000000;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills .skillbox {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.025);
+    border-radius: 0 10px 10px 0;
+}
+
+.skills .skillbox:nth-child(1) {
+    transform: translateX(-70px);
+}
+
+.skills .skillbox:nth-child(3) {
+    transform: translateX(70px);
+}
+
+.skills:hover .skillbox:nth-child(1) {
+    transform: translateX(0);
+}
+
+.skills:hover .skillbox:nth-child(3) {
+    transform: translateX(0);
+}
+
+.skills .skillbox:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: rgba(var(--bs-success-rgb));
+    transition: 0.5s ease-in-out;
+}
+
+.skills .skillbox:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: rgba(var(--bs-info-rgb));
+    transition: 0.5s ease-in-out;
+}
+
+.skills .skillbox:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: rgba(var(--bs-danger-rgb));
+    transition: 0.5s ease-in-out;
+}
+
+.skills .skillbox:hover::before {
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+}
+
+.skills .skillbox .info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.skills .skillbox .info .text {
+    padding-top: 15px;
+    transition: 0.2s;
+}
+
+.skills .skillbox:hover .info {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.skills .skillbox:hover .info .icon {
+    color: #ffffff !important;
+    transition: 0.5s;
+}
+
+.skills .skillbox .info .icon {
+    position: relative;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.skills .skillbox:nth-child(1) .info .icon {
+    color: rgba(var(--bs-success-rgb));
+    transition: 1s;
+}
+
+.skills .skillbox:nth-child(2) .info .icon {
+    color: rgba(var(--bs-info-rgb));
+    transition: 1s;
+}
+
+.skills .skillbox:nth-child(3) .info .icon {
+    color: rgba(var(--bs-danger-rgb));
+    transition: 1s;
+}
+
+@media only screen and (max-width: 992px) {
+    .skills {
+        margin-bottom: 100px;
+    }
+
+    .skills .skillbox:nth-child(1) {
+        transform: translateX(0);
+    }
+
+    .skills .skillbox:nth-child(2) {
+        transform: translateX(0);
+    }
+
+    .skills .skillbox:nth-child(3) {
+        transform: translateX(0);
+    }
+
+    .skills .skillbox {
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .skills .skillbox .info .text p {
+        margin: 0 5px 5px 5px;
+    }
+}

@@ -1,0 +1,4 @@
+.row {
+    margin-left: 0; /*bug fix of bootstrap --> right side overflow*/
+    margin-right: 0; /*bug fix of bootstrap --> right side overflow*/
+}

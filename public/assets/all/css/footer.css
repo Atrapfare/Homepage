@@ -1,0 +1,68 @@
+.footer .social ul li a .icon {
+    color: #ffffff;
+    font-size: 1.7em;
+    animation: firstColor 0.5s ease-in-out infinite alternate;
+}
+
+.footer .social ul li:nth-child(2) a .icon {
+    animation: secondColor 0.5s ease-in-out infinite alternate;
+}
+
+.footer .social ul li:nth-child(3) a .icon {
+    animation: thirdColor 0.5s ease-in-out infinite alternate;
+}
+
+.footer .social ul li:nth-child(4) a .icon {
+    animation: fourthColor 0.5s ease-in-out infinite alternate;
+}
+
+.footer .newsletter p {
+    margin-top: 15px;
+    font-size: 0.9em;
+    line-height: 13px;
+}
+
+.footer .newsletter .newsletterSuccessMessage,
+.footer .newsletter .newsletterFailureMessage{
+    display: none;
+}
+
+.footer .newsletter input.error {
+    border: 2px solid rgb(var(--bs-danger-rgb));
+}
+
+@keyframes firstColor {
+    0% {
+        text-shadow: 0 0 10px #ff1177, 0 0 20px #d6249f, 0 0 30px #385aeb;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff1177, 0 0 10px #d6249f, 0 0 15px #385aeb;
+    }
+}
+
+@keyframes secondColor {
+    0% {
+        text-shadow: 0 0 10px #4a9342, 0 0 20px #64a96f, 0 0 30px #4ede16;
+    }
+    100% {
+        text-shadow: 0 0 5px #4a9342, 0 0 10px #64a96f, 0 0 15px #4ede16;
+    }
+}
+
+@keyframes thirdColor {
+    0% {
+        text-shadow: 0 0 10px #181872, 0 0 20px #263493, 0 0 30px #00acee;
+    }
+    100% {
+        text-shadow: 0 0 5px #181872, 0 0 10px #263493, 0 0 15px #00acee;
+    }
+}
+
+@keyframes fourthColor {
+    0% {
+        text-shadow: 0 0 10px #181872, 0 0 20px #263493, 0 0 30px #3b5998;
+    }
+    100% {
+        text-shadow: 0 0 5px #181872, 0 0 10px #263493, 0 0 15px #3b5998;
+    }
+}

@@ -1,0 +1,112 @@
+.contactForm h2 {
+    color: var(--accentColor);
+    font-weight: bold;
+    text-align: center;
+}
+
+.contactForm .formBox .inputBox {
+    margin-bottom: 25px;
+}
+
+.contactForm .formBox .inputBox {
+    width: 100%;
+}
+
+.contactForm .formBox .inputBox textarea,
+.contactForm .formBox .inputBox input:not([type="submit"]) {
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #555555;
+    outline: none;
+    color: #ffffff;
+    resize: none;
+    padding: 10px;
+    margin: 0 10% 0 10%;
+}
+
+
+.contactForm .formBox .inputBox textarea {
+    min-height: 15rem;
+}
+
+.contactForm .formBox .inputBox input::placeholder,
+.contactForm .formBox .inputBox textarea::placeholder {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.contactForm .formBox .inputBox input:valid {
+    border-bottom: 2px solid rgb(var(--bs-success-rgb));
+}
+
+.contactInfo {
+    width: 100%;
+    height: 100%;
+}
+
+.contactInfo .map iframe {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: none;
+    border-radius: 10px;
+}
+
+.contactInfo .contactData {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contactInfo .contactData .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfo .contactData .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: var(--accentColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.contactInfo .contactData .box .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.contactInfo .contactData .box .text h3 {
+    font-weight: 900;
+    color: #9954b4
+}
+
+.contactInfo .contactData .box .text p a {
+    color: white;
+    text-decoration: none;
+}
+
+.contactForm .formBox .inputBox input.error,
+.contactForm .formBox .inputBox textarea.error{
+    border-bottom: 2px solid rgb(var(--bs-danger-rgb));
+}
+
+.contactForm .formBox .inputBox input:read-only:not([type="submit"]),
+.contactForm .formBox .inputBox textarea:read-only{
+    color: #555555;
+}
+
+.responseLottie {
+    width: 20%;
+    height: 20%;
+}

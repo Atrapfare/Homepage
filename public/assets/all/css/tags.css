@@ -1,0 +1,9 @@
+/*tags*/
+:root {
+    --accentColor: rgba(82, 171, 112, 0.5);
+    --hoverColor: rgba(0, 0, 0, 0.14)
+}
+
+body {
+    font-family: Century Gothic, sans-serif !important;
+}

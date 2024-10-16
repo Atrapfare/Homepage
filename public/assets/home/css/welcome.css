@@ -1,0 +1,63 @@
+.welcome .centered .imgBx {
+    position: relative;
+    margin-left: calc(50% - 175px);
+    width: 375px;
+    height: 375px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.welcome .centered .imgBx .info {
+    position: absolute;
+    inset: 6px;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome .centered .imgBx .info img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.welcome .centered .imgBx:hover .info img {
+    opacity: 0;
+}
+
+.welcome .centered .imgBx .info h2 {
+    position: relative;
+    font-size: 1.5em;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .welcome h1 {
+        font-size: 2.3rem;
+    }
+    .welcome .centered .imgBx {
+        position: relative;
+        margin-left: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}

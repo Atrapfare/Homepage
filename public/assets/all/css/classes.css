@@ -1,0 +1,60 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.human {
+    display: none;
+}
+
+.textSemiMuted {
+    color: #92a0ab;
+}
+
+.cursor:hover {
+    cursor: pointer;
+}
+
+.styledLink {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.styledLink:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accentColor);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.styledLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.bgAccentColor {
+    background-color: var(--accentColor);
+}
+
+.textAccentColor {
+    color: var(--accentColor);
+}
+
+.minVh50 {
+    min-height: 50vh;
+}
+
+.minVh75 {
+    min-height: 75vh;
+}
